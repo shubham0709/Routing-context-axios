@@ -1,0 +1,18 @@
+.item {
+  display: flex;
+  width: 40%;
+  margin: auto;
+  flex-direction: column;
+  border: 2px solid rgb(106, 0, 245);
+  padding: 10px 10px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.image {
+  width: 30%;
+  aspect-ratio: auto;
+  margin: 0 auto;
+}
+.item * {
+  line-height: 30px;
+}

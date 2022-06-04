@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom"
+import Women from "./pages/Women";
+import Electronics from "./pages/Electronics";
+import Jewelery from "./pages/Jewelery";
+import Men from "./pages/Men";
+import Item from "./pages/Item";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      <Navbar />
+      <img src="https://img.mytheresa.com/media/static/raw/cms/l/gate_page_2022/Gatepage_May22_desktop_2x_20220513093955.jpg?imwidth=1180&imdensity=1" />
+      <Routes>
+        <Route path="/jewelery" element={<Jewelery />}></Route>
+        <Route path="/men" element={<Men />}></Route>
+        <Route path="/women" element={<Women />} ></Route>
+        <Route path="/electronics" element={<Electronics />}></Route>
+        <Route path="/item" element={<Item />}></Route>
+      </Routes>
+      <Footer />
+    </div >
   );
 }
 

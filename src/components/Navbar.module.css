@@ -1,0 +1,12 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid black;
+  padding: 15px 20px;
+  background-color: teal;
+}
+.navbar * {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+}
