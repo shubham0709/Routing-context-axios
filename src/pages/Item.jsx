@@ -10,14 +10,12 @@ const Item = () => {
   return (
     <div>
       <div className={style.item}>
-        <img src={x.image} className={style.image} />
+        <img src={x.image} alt="" className={style.image} />
         <h1>{x.title}</h1>
         <h3>Cat : {x.category}</h3>
         <p>{x.description}</p>
         <p>price : {x.price}</p>
-        <p>
-          Rating : {x.rating.rate}/5 by {x.rating.count} people
-        </p>
+        <p>rating : {x.rating.rate}</p>
       </div>
     </div>
   );
