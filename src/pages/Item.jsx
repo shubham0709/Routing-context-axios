@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
 import { ItemContext } from "../contexts/ItemContext";
 import style from "./Item.module.css";
+import { CartContext } from "../contexts/CartContext";
 
 const Item = () => {
   const { clickedItem } = useContext(ItemContext);
   let x = clickedItem;
-  console.log(x);
+
+  const { cart, updateCart } = useContext(CartContext);
+  console.log(cart);
 
   return (
     <div>
@@ -16,6 +19,13 @@ const Item = () => {
         <p>{x.description}</p>
         <p>price : {x.price}</p>
         <p>rating : {x.rating.rate}</p>
+        <button
+          onClick={() => {
+            updateCart(x);
+          }}
+        >
+          ADD TO CART
+        </button>
       </div>
     </div>
   );

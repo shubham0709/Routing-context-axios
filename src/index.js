@@ -5,13 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { ItemProvider } from './contexts/ItemContext';
+import { CartProvider } from './contexts/CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <ItemProvider>
-      <App />
-    </ItemProvider>
+    <CartProvider>
+      <ItemProvider>
+        <App />
+      </ItemProvider>
+    </CartProvider>
   </BrowserRouter>
 );
 reportWebVitals();

@@ -7,6 +7,7 @@ import Electronics from "./pages/Electronics";
 import Jewelery from "./pages/Jewelery";
 import Men from "./pages/Men";
 import Item from "./pages/Item";
+import Cart from "./components/Cart.jsx";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/women" element={<Women />} ></Route>
         <Route path="/electronics" element={<Electronics />}></Route>
         <Route path="/item" element={<Item />}></Route>
+        <Route path="/cart" element={<Cart />}></Route>
       </Routes>
       <Footer />
     </div >

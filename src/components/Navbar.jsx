@@ -1,8 +1,12 @@
 import React from "react";
 import style from "./Navbar.module.css";
 import { Link } from "react-router-dom";
+import { CartContext } from "../contexts/CartContext";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const { cart } = useContext(CartContext);
+
   return (
     <div>
       <div className={style.navbar}>
@@ -11,6 +15,7 @@ const Navbar = () => {
         <Link to="/jewelery">jewelery</Link>
         <Link to="/men">men's clothing</Link>
         <Link to="/women">women's clothing</Link>
+        <Link to="/cart">cart({cart.length})</Link>
       </div>
       <div className={style.imageContainer}>
         <img
