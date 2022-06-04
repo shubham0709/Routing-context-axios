@@ -13,7 +13,9 @@ function App() {
   return (
     <div>
       <Navbar />
-      <img src="https://img.mytheresa.com/media/static/raw/cms/l/gate_page_2022/Gatepage_May22_desktop_2x_20220513093955.jpg?imwidth=1180&imdensity=1" />
+      <div className="imageContainer">
+        <img className="image" src="https://img.mytheresa.com/media/static/raw/cms/l/gate_page_2022/Gatepage_May22_desktop_2x_20220513093955.jpg?imwidth=1180&imdensity=1" />
+      </div>
       <Routes>
         <Route path="/jewelery" element={<Jewelery />}></Route>
         <Route path="/men" element={<Men />}></Route>
